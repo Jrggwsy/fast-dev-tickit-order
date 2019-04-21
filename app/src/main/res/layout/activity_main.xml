@@ -29,7 +29,7 @@
             app:layout_widthPercent="85%">
 
 
-            <com.irinnovative.onepagesigninsignup.VerticalTextView
+            <com.irinnovative.onepagesigninsignup.ui.VerticalTextView
                 android:id="@+id/tvSigninInvoker"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -61,7 +61,7 @@
             android:orientation="horizontal"
             app:layout_widthPercent="15%">
 
-            <com.irinnovative.onepagesigninsignup.VerticalTextView
+            <com.irinnovative.onepagesigninsignup.ui.VerticalTextView
                 android:id="@+id/tvSignupInvoker"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

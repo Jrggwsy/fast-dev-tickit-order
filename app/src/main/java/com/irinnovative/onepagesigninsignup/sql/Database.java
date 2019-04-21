@@ -135,7 +135,8 @@ public class Database extends SQLiteOpenHelper {
         return tickets;
     }
 
-    @Override public void onCreate(SQLiteDatabase db) {
+    @Override
+    public void onCreate(SQLiteDatabase db) {
         String stuUserTable = "create table User(_id integer primary key autoincrement,userName text , password text, numberId text, name text, sex text, number text)";
         String stuTicketTable = "create table Ticket(_id integer primary key autoincrement,origin text , destination text" +
                 ",originTime text ,destinationTime text , time text , identifier text,businessSeatCount Integer,firstSeatCount Integer" +
@@ -144,7 +145,8 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL(stuTicketTable);
     }
 
-    @Override public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
 }

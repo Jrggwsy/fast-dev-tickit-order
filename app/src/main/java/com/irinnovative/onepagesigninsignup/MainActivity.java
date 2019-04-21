@@ -1,7 +1,6 @@
 package com.irinnovative.onepagesigninsignup;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.percent.PercentLayoutHelper;
@@ -14,15 +13,12 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.irinnovative.onepagesigninsignup.sql.Database;
 import com.irinnovative.onepagesigninsignup.sql.User;
-
-import static java.lang.Thread.sleep;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -128,6 +124,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 else {
                     if (password_Login.getText().toString().equals(user.getPassword())) {
                         Toast.makeText(MainActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
+                        Intent intent=new Intent(MainActivity.this,SearchTicket.class);
+                        startActivity(intent);
                     }
                     else {
                         Toast.makeText(MainActivity.this, "密码错误", Toast.LENGTH_SHORT).show();
@@ -166,7 +164,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     user.setPassword(password.getText().toString());
                     user.setUserName(user_name.getText().toString());
                     database.insertUser(user);
-                    Toast.makeText(MainActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "注册成功,自动登陆", Toast.LENGTH_SHORT).show();
+                    Intent intent=new Intent(MainActivity.this,SearchTicket.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this, "已有当前用户，请重新编写用户名", Toast.LENGTH_SHORT).show();
                 }

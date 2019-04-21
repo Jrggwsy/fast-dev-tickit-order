@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme.NoActionBar.FullScreen" >
 
         <activity android:name=".MainActivity"
-                  android:screenOrientation="portrait">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ForgetPassword"/>
+        <activity android:name=".VehicleActivity"/>
+        <activity android:name=".SearchTicket" />
     </application>
 
 </manifest>
