@@ -20,4 +20,4 @@
 
 ----
 
-<img src="https://github.com/Jrggwsy/fast-dev-tickit-order/blob/master/demo.gif" width="480" height="960" alt="图片加载失败"/>
+<img src="https://github.com/Jrggwsy/fast-dev-tickit-order/blob/master/demo.gif" width="540" height="960" alt="图片加载失败"/>
