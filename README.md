@@ -18,6 +18,12 @@
 
     3.UI显示存在问题
 
-----
+----  
+
+# 第三次迭代 - 车票订购模块
+  
+添加了车票订购模块，可以对库存的车票进行订购了  
+
+----  
 
 <img src="https://github.com/Jrggwsy/fast-dev-tickit-order/blob/master/demo.gif" width="540" height="960" alt="图片加载失败"/>

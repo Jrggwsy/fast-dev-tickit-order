@@ -1,6 +1,7 @@
 package com.irinnovative.onepagesigninsignup;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.percent.PercentLayoutHelper;
@@ -123,6 +124,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 else {
                     if (password_Login.getText().toString().equals(user.getPassword())) {
+                        SharedPreferences.Editor edit = getSharedPreferences("user", 0).edit();
+                        edit.putString("userName", user.getUserName());
+                        edit.apply();
                         Toast.makeText(MainActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
                         Intent intent=new Intent(MainActivity.this,SearchTicket.class);
                         startActivity(intent);
@@ -164,6 +168,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     user.setPassword(password.getText().toString());
                     user.setUserName(user_name.getText().toString());
                     database.insertUser(user);
+                    SharedPreferences.Editor edit = getSharedPreferences("user", 0).edit();
+                    edit.putString("userName", user.getUserName());
+                    edit.apply();
                     Toast.makeText(MainActivity.this, "注册成功,自动登陆", Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(MainActivity.this,SearchTicket.class);
                     startActivity(intent);

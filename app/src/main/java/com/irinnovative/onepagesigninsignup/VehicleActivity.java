@@ -1,5 +1,6 @@
 package com.irinnovative.onepagesigninsignup;
 
+import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Handler;
@@ -58,10 +59,10 @@ public class VehicleActivity extends AppCompatActivity {
         adapter.setListener(new VehicleAdapter.VehicleListener() {
             @Override
             public void itemClick(Ticket ticket) {
-               //Intent intent = new Intent(VehicleActivity.this, OrderActivity.class);
-               //intent.putExtra("data", ticket);
-               //startActivity(intent);
-                Toast.makeText(VehicleActivity.this,"订票系统维护中！",Toast.LENGTH_SHORT).show();
+               Intent intent = new Intent(VehicleActivity.this, OrderActivity.class);
+               intent.putExtra("data", ticket);
+               startActivity(intent);
+               //Toast.makeText(VehicleActivity.this,"订票系统维护中！",Toast.LENGTH_SHORT).show();
             }
         });
 
